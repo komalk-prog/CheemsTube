@@ -1,4 +1,80 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 .Body{
     display:flex;
     
+}
+.head{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.hambuger{
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+.logo-icon{
+    padding: 10px;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+}
+.search{
+    padding: 20px;
+    margin-left: 7%;
+}
+.search-bar{
+    width:500px;
+    height: 29px;
+   border-radius: 40px 0px 0px 40px;
+   border-width: 1px;
+    
+}
+.search-btn{
+    height: 31px;
+   border-radius: 0px 40px 40px 0px;
+   border-width: 1px;
+}
+.user-icon{
+    padding: 10px;
+    height: 40px;
+    width: 40px; 
+}
+.sideBar{
+    height: 450px;
+    width: 175px;
+    padding-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.sideBar-headings{
+    margin:15px;
+    margin-bottom: 10px;
+}
+.list{
+    list-style: none;
+    margin:20px;
+    margin-top: 0px;
+}
+.list li{
+    margin-bottom: 7px;
+}
+.buttonList{
+    display: flex;
+    padding:5px;
+}
+.button{
+    margin:5px;
+    padding: 10px 20px 25px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 30px;
+    background-color: #e7e7e7;
+    border:0px;
 }
