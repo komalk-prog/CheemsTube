@@ -4,6 +4,7 @@ import logoIcon from "../images/youtubeIcon.png"
 import userIcon from "./../images/user.png"
 import { useDispatch } from 'react-redux'
 import {toggleMenu} from "../util/appSlice"
+import cheemsLogo from "../images/cheemsLogo.png"
 
 
 const Head = () => {
@@ -30,14 +31,27 @@ const Head = () => {
     <img
       alt="youtube"
       src={logoIcon}
+     
       className="logo-icon"
     />
-    </a>
+   
+    <img
+      alt="cheemstube"
+      src={cheemsLogo}
+      style={{width:"200px",height:"55px"}}
+      className="cheems-icon"
+    />
+     </a>
     </div>
     <div className='search'>
     <input type="text" className='search-bar'/>
-    <button className='search-btn'>search</button>
+
+    <button className='search-btn'>
+    <h3 className='search-emoji'>🔍</h3>
+    </button>
     </div>
+
+    
 
     <div className='profile'>
 
