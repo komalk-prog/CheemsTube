@@ -17,7 +17,7 @@ const VideoCard = ({video}) => {
     <ul className='video-detail'>
         <li><h4>{title}</h4></li>
         <li>{channelTitle}</li>
-        <li>{statistics.viewCount}</li>
+        <li>{statistics.viewCount+" views"}</li>
     </ul>
      
     </div>

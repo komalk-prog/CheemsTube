@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Shimmer=(array)=>{
+const Shimmer=()=>{
 {
     
    return( 
     <div className="video-list">
     {Array(10)
       .fill("")
-      .map(() => {
+      .map((a,b) => {
         return (
-          <div className="shimmer"></div>
+          <div key={b} className="shimmer"></div>
         );
       })}
   </div>

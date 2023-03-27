@@ -19,8 +19,8 @@ const VideoContainer = () => {
     getVideo();
   },[]);
 
-  if(true)
-    return <Shimmer array={videos}/>;
+  if(!videos.length)
+    return <Shimmer />;
   return (
   <div className='video-list'>
    {videos.map((video)=> <VideoCard key={video.snippet.title} video={video}/>)}
@@ -31,4 +31,4 @@ const VideoContainer = () => {
   )
 }
 
-export default VideoContainer
+export default VideoContainer;

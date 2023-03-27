@@ -1,19 +1,57 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Hamburger from "./../../images/menu.png"
 import logoIcon from "../../images/youtubeIcon.png"
 import userIcon from "./../../images/user.png"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {toggleMenu} from "../../util/appSlice"
 import cheemsLogo from "../../images/cheemsLogo.png"
+import { cacheResults } from '../../util/searchSlice'
 
 
 const Head = () => {
 
+  const [searchQuery, setSearchQuery]=useState("");
+  const [suggestions, setSuggestions]=useState([]);
+  const [showSuggetions,setShowSuggetions]=useState(false);
   const dispatch=useDispatch();
 
+  const searchCache=useSelector(store=>store.search);
+
+  useEffect(()=>{
+    //api call
+    //make when key press if(time bwtn call<200ms)
+    
+   const timer=setTimeout(()=> {
+    if(searchCache[searchQuery]){
+      setShowSuggetions(searchCache[searchQuery]);
+    }
+    else{
+    getSuggestionApi()
+  }
+  },200);
+
+   //destroy previous call
+    return ()=>{
+      clearTimeout(timer);
+    }
+
+  },[searchQuery])
+
+
+
+  const getSuggestionApi=async()=>{
+    const data=await fetch("http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="+searchQuery);
+    const json=await data.json();
+    dispatch(cacheResults({
+      [searchQuery]:json[1],  // key:value state:action.payload
+    }))
+    setSuggestions(json[1]);
+  }
   const toggleMenuHandler=()=>{
     dispatch(toggleMenu());
-  };
+  }
+
+
 
 
 
@@ -43,16 +81,36 @@ const Head = () => {
     />
      </a>
     </div>
+    
     <div className='search'>
-    <input type="text" className='search-bar'/>
+    <div>
+
+    <input 
+    type="text" 
+    className='search-bar'
+    value={searchQuery}
+    onChange={(e)=>{setSearchQuery(e.target.value)}}
+    onFocus={()=>setShowSuggetions(true)}
+    onBlur={()=>setShowSuggetions(false)}
+    />
 
     <button className='search-btn'>
     <h3 className='search-emoji'>🔍</h3>
     </button>
+        
     </div>
-
+    {showSuggetions?
+    <div className='suggestion' >
+    <ul>
+      {suggestions.map((suggestion)=><li>🔍 {suggestion}</li>)}
+    </ul>
+       
+    </div>
     
-
+    :null
+    
+}
+</div>
     <div className='profile'>
 
     </div>
