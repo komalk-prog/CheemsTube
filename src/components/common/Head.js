@@ -1,10 +1,10 @@
 import React from 'react'
-import Hamburger from "./../images/menu.png"
-import logoIcon from "../images/youtubeIcon.png"
-import userIcon from "./../images/user.png"
+import Hamburger from "./../../images/menu.png"
+import logoIcon from "../../images/youtubeIcon.png"
+import userIcon from "./../../images/user.png"
 import { useDispatch } from 'react-redux'
-import {toggleMenu} from "../util/appSlice"
-import cheemsLogo from "../images/cheemsLogo.png"
+import {toggleMenu} from "../../util/appSlice"
+import cheemsLogo from "../../images/cheemsLogo.png"
 
 
 const Head = () => {

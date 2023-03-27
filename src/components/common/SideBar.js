@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -10,19 +11,23 @@ const SideBar = () => {
     <div className="sideBar">
       <ul className="list">
         <li>
+        <Link to="/">
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/1946/1946488.png"}
           />
-          Home
+          Home</Link>
         </li>
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/7887/7887862.png"}
           />
           Shorts
         </li>
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/2989/2989849.png"}
           />
           subcriptions
@@ -34,24 +39,28 @@ const SideBar = () => {
       <ul className="list">
       <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/2989/2989835.png"}
           />
           Library
         </li>
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/2089/2089679.png"}
           />
           History
         </li>
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/2859/2859706.png"}
           />
           Your videos
         </li>
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/456/456257.png"}
           />
           Liked videos
@@ -63,6 +72,7 @@ const SideBar = () => {
       <ul className="list">
       <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/1942/1942144.png"}
           />
           Trending
@@ -70,24 +80,28 @@ const SideBar = () => {
          
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/3049/3049365.png"}
           />
           Live
         </li>
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/10172/10172321.png"}
           />
           Music
         </li>
         <li>
           <img
+          alt=""
             src={"https://cdn-icons-png.flaticon.com/512/1179/1179069.png"}
           />
           Movie
         </li>
         <li>
-          <img src={"https://cdn-icons-png.flaticon.com/512/808/808476.png"} />
+          <img 
+          alt="" src={"https://cdn-icons-png.flaticon.com/512/808/808476.png"} />
           Gaming
         </li>
       </ul>

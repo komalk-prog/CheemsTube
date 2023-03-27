@@ -4,13 +4,22 @@
 }
 .Body{
     display:flex;
-    
+}
+.shimmer{
+    height:180px;
+    width:325px; 
+    border-radius: 2%;
+    margin: 10px;
+    background-image: linear-gradient(to bottom right, rgb(171, 171, 171),white);
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .head{
     padding: 10px;
     display: flex;
     justify-content: space-between;
  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 .hambuger{
     padding: 10px;
@@ -58,10 +67,10 @@
 }
 .sideBar{
     height: 100%;
-    width: 175px;
+    width: 200px;
     padding-top: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    
+   
 }
 .sideBar-headings{
     margin:15px;
@@ -81,6 +90,10 @@
     margin-right: 10px;
     
 }
+.MainContainer{
+    margin-left: 20px;
+    float: right;
+}
 .buttonList{
     display: flex;
     padding:5px;
@@ -94,4 +107,23 @@
     height: 30px;
     background-color: #e7e7e7;
     border:0px;
+}
+.video-img{
+    height:180px;
+    width:325px; 
+    border-radius: 2%;
+}
+.videoCard{
+    margin-bottom: 10px;
+    padding: 10px;
+    height:280px;
+    width:320px;
+}
+.video-detail{
+    list-style: none;
+}
+.video-list{
+    display:flex;
+    flex-wrap: wrap;
+   
 }

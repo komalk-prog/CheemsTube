@@ -1,12 +1,12 @@
 import React from 'react'
-import MainContainer from './MainContainer'
-import SideBar from './SideBar'
+import SideBar from './common/SideBar'
+import { Outlet } from 'react-router-dom'
 
 const Body = () => {
   return (
     <div className='Body'>
     <SideBar/>
-    <MainContainer/>
+    <Outlet/>
     </div>
   )
 }
