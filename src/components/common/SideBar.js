@@ -32,14 +32,16 @@ async function getCategories(){
   return (
     <div className="sideBar">
       <ul className="list">
+      <Link to="/">
         <li>
-        <Link to="/">
+       
           <img
           alt=""
             src={"https://cdn-icons-png.flaticon.com/512/1946/1946488.png"}
           />
-          Home</Link>
+          Home
         </li>
+        </Link>
         <li>
           <img
           alt=""
