@@ -102,7 +102,7 @@ const Head = () => {
     {showSuggetions?
     <div className='suggestion' >
     <ul>
-      {suggestions.map((suggestion)=><li>🔍 {suggestion}</li>)}
+      {suggestions.map((suggestion)=><li key={suggestion}>🔍 {suggestion}</li>)}
     </ul>
        
     </div>

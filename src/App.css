@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: "Roboto","Arial",sans-serif;
 }
 .Body{
     display:flex;
@@ -78,9 +79,9 @@
 }
 .sideBar{
     height: 100%;
-    width: 200px;
+    width: 15%;
     padding-top: 15px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
    
 }
 .sideBar-headings{
@@ -90,11 +91,11 @@
 .list{
     list-style: none;
     margin:20px;
-    margin-top: 0px;
+    margin-top: 20px;
 }
 .list li{
     margin-bottom: 25px;
-    font-family: "Roboto","Arial",sans-serif;
+   
 }
 .list img{
     height : 18px;
@@ -103,7 +104,8 @@
 }
 .MainContainer{
     margin-left: 20px;
-    float: right;
+    width: 85%;
+    margin-left: 8%;
 }
 .buttonList{
     display: flex;

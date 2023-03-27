@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { CATEGORY_API } from "../../util/constants";
 
 const SideBar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
+  const [categories,setCategories] = useState();
+
+
+useEffect(
+  ()=>{
+    getCategories();
+
+  },[categories]
+);
+ 
+async function getCategories(){
+
+  const categoryResponse = await fetch(CATEGORY_API);
+  const categoryData = await categoryResponse.json();
+
+  setCategories(categoryData.items);
+
+
+}
+
+
 
   if (!isMenuOpen) return null;
 
@@ -105,6 +127,13 @@ const SideBar = () => {
           Gaming
         </li>
       </ul>
+      <hr style={lineStyle} />
+      <h3 className="sideBar-headings">Categories</h3>
+      {categories? <ul className="list">
+      {categories.map(category=> <li key={category.snippet.title}>{category.snippet.title}</li>)}
+     
+    </ul>:null}
+
     </div>
   );
 };
