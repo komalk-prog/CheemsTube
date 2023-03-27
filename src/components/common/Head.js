@@ -40,7 +40,7 @@ const Head = () => {
 
 
   const getSuggestionApi=async()=>{
-    const data=await fetch("http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="+searchQuery);
+    const data=await fetch("https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="+searchQuery);
     const json=await data.json();
     dispatch(cacheResults({
       [searchQuery]:json[1],  // key:value state:action.payload
