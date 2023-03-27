@@ -12,7 +12,7 @@ useEffect(
   ()=>{
     getCategories();
 
-  },[categories]
+  },[]
 );
  
 async function getCategories(){

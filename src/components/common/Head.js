@@ -11,7 +11,7 @@ import { cacheResults } from '../../util/searchSlice'
 const Head = () => {
 
   const [searchQuery, setSearchQuery]=useState("");
-  const [suggestions, setSuggestions]=useState([]);
+  const [suggestions, setSuggestions]=useState();
   const [showSuggetions,setShowSuggetions]=useState(false);
   const dispatch=useDispatch();
 
@@ -90,7 +90,10 @@ const Head = () => {
     className='search-bar'
     value={searchQuery}
     onChange={(e)=>{setSearchQuery(e.target.value)}}
-    onFocus={()=>setShowSuggetions(true)}
+    onFocus={()=>{
+      if(suggestions)
+      setShowSuggetions(true)
+      }}
     onBlur={()=>setShowSuggetions(false)}
     />
 
@@ -99,7 +102,7 @@ const Head = () => {
     </button>
         
     </div>
-    {showSuggetions?
+    {showSuggetions && suggestions?
     <div className='suggestion' >
     <ul>
       {suggestions.map((suggestion)=><li key={suggestion}>🔍 {suggestion}</li>)}

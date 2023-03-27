@@ -6,7 +6,7 @@ import VideoCard from './VideoCard';
 
 const VideoContainer = () => {
   
-  const [videos, setVideos]=useState({});
+  const [videos, setVideos]=useState();
 
   async function getVideo(){
     const VideoResponse= await fetch(YOUTUBE_VIDEOS_API);
@@ -19,7 +19,7 @@ const VideoContainer = () => {
     getVideo();
   },[]);
 
-  if(!videos.length)
+  if(!videos)
     return <Shimmer />;
   return (
   <div className='video-list'>
