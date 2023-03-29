@@ -17,10 +17,28 @@
     width:325px; 
     border-radius: 2%;
     margin: 10px;
-    background-image: linear-gradient(to bottom right, rgb(171, 171, 171),white);
+  background-color: rgba(0, 0, 0, 0.1);
 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.title-shimmer{
+    margin: 10px;
+    height: 15px;
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.views-shimmer{
+    margin: 10px;
+   
+    height: 15px;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .head{
     padding: 10px;
     display: flex;
