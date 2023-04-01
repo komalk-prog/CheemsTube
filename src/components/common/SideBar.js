@@ -27,7 +27,33 @@ async function getCategories(){
 
 
 
-  if (!isMenuOpen) return null;
+  if (!isMenuOpen) return (
+    <div >
+      <ul className="list">
+        <li><img
+          alt=""
+            src={"https://cdn-icons-png.flaticon.com/512/1946/1946488.png"}
+          /></li>
+          <li>
+          <img
+          alt=""
+            src={"https://cdn-icons-png.flaticon.com/512/7887/7887862.png"}
+          /></li>
+          <li>
+          <img
+          alt=""
+            src={"https://cdn-icons-png.flaticon.com/512/2989/2989849.png"}
+          /></li>
+          <li>
+          <img
+          alt=""
+            src={"https://cdn-icons-png.flaticon.com/512/2989/2989835.png"}
+          />
+          </li>
+
+      </ul>
+    </div>
+  );
 
   return (
     <div className="sideBar">

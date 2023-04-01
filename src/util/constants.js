@@ -6,3 +6,53 @@
   export const CATEGORY_API ="https://youtube.googleapis.com/youtube/v3/videoCategories?part=snippet&regionCode=IN&key="+KEY;
 
 export default YOUTUBE_VIDEOS_API;
+
+export const comment=[
+   { name:"komal kushwha",
+     text:"lorem episum hjadsvb dhhhhhSJ",
+     replies:[{
+      name:"komal kushwha",
+      text:"lorem episum hjadsvb dhhhhhSJ",
+      replies:[{
+        name:"komal kushwha",
+        text:"lorem episum hjadsvb dhhhhhSJ",
+        replies:[{
+          name:"komal kushwha",
+          text:"lorem episum hjadsvb dhhhhhSJ",
+          replies:[{}]
+        }]
+      }]
+     },
+     {
+      name:"komal kushwha",
+      text:"lorem episum hjadsvb dhhhhhSJ",
+      replies:[{
+        name:"komal kushwha",
+        text:"lorem episum hjadsvb dhhhhhSJ",
+        replies:[{
+          name:"komal kushwha",
+          text:"lorem episum hjadsvb dhhhhhSJ",
+          replies:[{}]
+        }]
+      }]
+     }]
+  },
+  { name:"komal kushwha",
+  text:"lorem episum VERY NOICE BHIDEO",
+     replies:[{
+      name:"komal kushwha",
+      text:"lorem episum hjadsvb dhhhhhSJ",
+      replies:[{
+        name:"komal kushwha",
+        text:"lorem episum hjadsvb dhhhhhSJ",
+        replies:[{
+          name:"komal kushwha",
+          text:"lorem episum hjadsvb dhhhhhSJ",
+          replies:[{}]
+        }]
+      }]
+     }]
+  },
+
+
+];
