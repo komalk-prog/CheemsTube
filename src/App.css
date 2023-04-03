@@ -170,23 +170,69 @@
 .watch-page{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin: 5px;
 }
 
 
+.embbed-video{
+    width:65%;
+    height:490px; 
+}
 
 
-
-
-
+.user-icon-comment{
+    padding: 5px;
+    height: 30px;
+    width: 30px; 
+}
 .comment{
+    display: flex;
     margin-top: 10px;
-    border-left: 2px solid black;
-    background-color: lightgray;
+    padding: 2px;
+    border-radius: 4px;
+    width: 40%;
+    background-color: rgb(234, 234, 234);
 }
 .replies{
-    padding: 1px;
+    padding: 2px;
     margin-left: 10px;
     margin-top: 5px;
     border-left: 2px solid black;
-    background-color: lightgray;
+}
+
+.video-live-container{
+    display: flex;
+    margin-top: 5px;
+}
+.live-chat{
+    height: 380px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.live-header{
+    border-bottom:2px solid gray ;
+    height: 40px;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.chats{
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+.live-chat-box{
+    margin-left: 20px;
+    border: 2px solid gray;
+    width:30%;
+    height:480px; 
+    border-radius: 10px;
+}
+.input-chat{
+    display: flex;
+    background-color: rgb(182, 182, 182);
+    border-radius: 0px 0px 10px 10px;
+    padding:10px;
 }

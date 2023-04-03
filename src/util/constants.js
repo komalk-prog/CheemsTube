@@ -7,48 +7,50 @@
 
 export default YOUTUBE_VIDEOS_API;
 
+export const OFFSET_LIVE_CHAT=20;
+
 export const comment=[
    { name:"komal kushwha",
-     text:"lorem episum hjadsvb dhhhhhSJ",
+     text:"1st layer ",
      replies:[{
       name:"komal kushwha",
-      text:"lorem episum hjadsvb dhhhhhSJ",
+      text:"second layer",
       replies:[{
         name:"komal kushwha",
-        text:"lorem episum hjadsvb dhhhhhSJ",
+        text:"3rd layer ",
         replies:[{
           name:"komal kushwha",
-          text:"lorem episum hjadsvb dhhhhhSJ",
-          replies:[{}]
+          text:"4th layer",
+          replies:null
         }]
       }]
      },
      {
       name:"komal kushwha",
-      text:"lorem episum hjadsvb dhhhhhSJ",
+      text:"Est voluptas pariatur ad quia beatae qui aperiam ipsa sit asperiores ",
       replies:[{
         name:"komal kushwha",
-        text:"lorem episum hjadsvb dhhhhhSJ",
+        text:"Est voluptas pariatur ad quia beatae qui aperiam ipsa sit asperiores ",
         replies:[{
           name:"komal kushwha",
-          text:"lorem episum hjadsvb dhhhhhSJ",
-          replies:[{}]
+          text:"Est voluptas pariatur ad quia beatae qui aperiam ipsa sit asperiores ",
+          replies:null
         }]
       }]
      }]
   },
   { name:"komal kushwha",
-  text:"lorem episum VERY NOICE BHIDEO",
+  text:"Est voluptas pariatur ad quia beatae qui aperiam ipsa sit asperiores ",
      replies:[{
       name:"komal kushwha",
-      text:"lorem episum hjadsvb dhhhhhSJ",
+      text:"Est voluptas pariatur ad quia beatae qui aperiam ipsa sit asperiores ",
       replies:[{
         name:"komal kushwha",
-        text:"lorem episum hjadsvb dhhhhhSJ",
+        text:"Est voluptas pariatur ad quia beatae qui aperiam ipsa sit asperiores ",
         replies:[{
           name:"komal kushwha",
-          text:"lorem episum hjadsvb dhhhhhSJ",
-          replies:[{}]
+          text:"Est voluptas pariatur ad quia beatae qui aperiam ipsa sit asperiores ",
+          replies:null
         }]
       }]
      }]

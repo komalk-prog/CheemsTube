@@ -5,7 +5,7 @@ const Shimmer=()=>{
     
    return( 
     <div className="video-list">
-    {Array(10)
+    {Array(9)
       .fill("")
       .map((a,b) => {
         return (
