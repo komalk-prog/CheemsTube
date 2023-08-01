@@ -29,11 +29,15 @@ async function getCategories(){
 
   if (!isMenuOpen) return (
     <div >
+    
       <ul className="list">
-        <li><img
+        <li>
+        <Link to='/'><img
           alt=""
             src={"https://cdn-icons-png.flaticon.com/512/1946/1946488.png"}
-          /></li>
+          />
+          </Link>
+          </li>
           <li>
           <img
           alt=""
@@ -58,16 +62,16 @@ async function getCategories(){
   return (
     <div className="sideBar">
       <ul className="list">
-      <Link to="/">
         <li>
-       
-          <img
+        <Link to="/">
+         <img
           alt=""
             src={"https://cdn-icons-png.flaticon.com/512/1946/1946488.png"}
           />
           Home
+          </Link>
         </li>
-        </Link>
+        
         <li>
           <img
           alt=""
@@ -158,7 +162,10 @@ async function getCategories(){
       <hr style={lineStyle} />
       <h3 className="sideBar-headings">Categories</h3>
       {categories? <ul className="list">
-      {categories.map(category=> <li key={category.snippet.title}>{category.snippet.title}</li>)}
+      {categories.map(category=> 
+      <li key={category.snippet.title}>
+      <Link to={"/category/"+category.id}>{category.snippet.title}</Link>
+      </li>)}
      
     </ul>:null}
 

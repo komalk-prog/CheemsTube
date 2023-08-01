@@ -4,20 +4,27 @@ import Shimmer from './Shimmer';
 import VideoCard from './VideoCard';
 
 
+
 const VideoContainer = () => {
+ 
   
   const [videos, setVideos]=useState();
 
+  let api=YOUTUBE_VIDEOS_API;
+ 
+    
+
   async function getVideo(){
-    const VideoResponse= await fetch(YOUTUBE_VIDEOS_API);
+    const VideoResponse= await fetch(api);
    
     const videoJson= await VideoResponse.json();
    setVideos(videoJson.items);
-
   }
-  useEffect(()=>{
-    getVideo();
-  },[]);
+    useEffect(()=>{
+      getVideo();
+    },[]);
+
+
 
   if(!videos)
     return <Shimmer />;

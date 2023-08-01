@@ -21,7 +21,7 @@ const LiveChat = () => {
         message:makeRandomString(),
        }));
       //console.log("Api polling")
-    },1000);
+    },1500);
 
     return ()=>clearInterval(i);
   },[]);
@@ -32,9 +32,9 @@ const LiveChat = () => {
     
     <div className='live-chat'>
    
-  <div >
+ 
    
-     <div >
+     
     {
       // don't use index as key
       chatMessage.map((c,i)=><ChatMessage
@@ -44,8 +44,8 @@ const LiveChat = () => {
       />)
     }
     
-    </div>
-    </div>
+   
+    
     
   </div>
   <form className='input-chat' onSubmit={(e)=>{
@@ -56,10 +56,10 @@ const LiveChat = () => {
       }))
       setLiveMessage("");
     }}>
-      <input style={{padding:"2px"}} type="text" value={liveMessage} 
+      <input className='input-box'  value={liveMessage}
       onChange={(e)=>{setLiveMessage(e.target.value);}}></input>
       
-     <button>send</button>
+     <button className='send-btn'>send</button>
       
       
     </form>
