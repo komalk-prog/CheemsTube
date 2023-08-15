@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import  YOUTUBE_VIDEOS_API from '../util/constants';
 import Shimmer from './Shimmer';
 import VideoCard from './VideoCard';
+import { YOUTUBE_VIDEOS_API } from '../util/constants';
 
 
 
@@ -10,12 +10,9 @@ const VideoContainer = () => {
   
   const [videos, setVideos]=useState();
 
-  let api=YOUTUBE_VIDEOS_API;
- 
-    
 
   async function getVideo(){
-    const VideoResponse= await fetch(api);
+    const VideoResponse= await fetch(YOUTUBE_VIDEOS_API);
    
     const videoJson= await VideoResponse.json();
    setVideos(videoJson.items);

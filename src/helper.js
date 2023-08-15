@@ -7,7 +7,7 @@ const nameList = [
 
   const commentList = [
     'OP bhai OP', ' are wah bhimya ', 'omposition ki chaal', 'very nice video', 'Idk, Whts going on :)', 'Hi','Woaahh !!',
-    'I am under water, too much raining','bulbulla','tum andhe hoke aaye ho mere gaon mein','thoda thoda hindi ata'
+    'I am under water, too much raining','tum andhe hoke aaye ho mere gaon mein','thoda thoda hindi ata'
   ];
   export function generateRandomName() {
    return  nameList[Math.floor(Math.random() * nameList.length)];

@@ -1,5 +1,5 @@
-import React from "react";
-import { comment } from "../util/constants";
+import React, { useEffect, useState } from "react";
+import { YOUTUBE_COMMENTS_API } from "../util/constants";
 import userIcon from "../images/user.png"
 
 const Comment = ({ data }) => {
@@ -7,34 +7,44 @@ const Comment = ({ data }) => {
     <div className="comment">
          <img
       alt="user"
-      src={userIcon}
+      style={{borderRadius:"50%"}}
+      src={data?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl}
       className="user-icon-comment"
     /><div>
-      <h4>{data?.name}</h4>
-      <p>{data?.text}</p>
+      <h4>{data?.snippet?.topLevelComment?.snippet?.authorDisplayName}</h4>
+      <p>{data?.snippet?.topLevelComment?.snippet?.textOriginal}</p>
       </div>
     </div>
   );
 };
 
 const CommentsList = ({ comments }) => {
+  console.log(comments);
+
   return comments.map((comment, i) => (
     <div style={{padding:"5px"}}>
-      
-   <Comment key={i} data={comment} />
-    {(comment.replies)?<>
-      <div className="replies">
-       <CommentsList comments={comment.replies}/>
-      
-      </div>
-</>:null}
+      <Comment key={i} data={comment} />
     </div>
   ));
 };
 
-const CommentsContainer = () => {
-  const Comments = comment;
+const CommentsContainer = ({id}) => {
+  const [Comments,setComments]=useState();
 
+  async function getComments(){
+    const CommentResponse= await fetch(YOUTUBE_COMMENTS_API+id);
+   
+    const CommentJson= await CommentResponse.json();
+    setComments(CommentJson.items);
+  }
+    useEffect(()=>{
+      getComments();
+    },[]);
+
+
+  if(!Comments)return null;
+  console.log(Comments)
+  
   return (
     <div>
       <h3>Comments :</h3>

@@ -30,7 +30,7 @@ const WatchPage = () => {
     
     <LiveChat/>
     </div>
-    <CommentsContainer/>
+    <CommentsContainer id={serachParam.get("v")}/>
     </div>
   )
 };
