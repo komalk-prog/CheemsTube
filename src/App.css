@@ -11,14 +11,15 @@
 
 .Body{
     display:flex;
+    margin-top: 100px;
+
 }
 .shimmer{
     height:180px;
     width:325px; 
     border-radius: 2%;
     margin: 10px;
-  background-color: rgba(0, 0, 0, 0.1);
-
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .title-shimmer{
@@ -26,25 +27,26 @@
     height: 15px;
     width: 280px;
     background-color: rgba(0, 0, 0, 0.1);
-
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .views-shimmer{
     margin: 10px;
-   
     height: 15px;
     width: 120px;
     background-color: rgba(0, 0, 0, 0.1);
-
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .head{
+    height: 80px;
     padding: 10px;
     display: flex;
+    width: 99%;
+    background-color: rgb(247, 196, 130);
     justify-content: space-between;
- box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    top: 0px;
 }
 .hambuger{
     padding: 10px;
@@ -109,23 +111,21 @@
     height: 100%;
     width: 12%;
     padding-top: 15px;
-   
-   
 }
 .sideBar-headings{
     margin:15px;
     margin-bottom: 10px;
 }
-.list{
+.Side-list{
     list-style: none;
     margin:20px;
     margin-top: 20px;
 }
-.list li{
+.Side-list li{
     margin-bottom: 25px;
    
 }
-.list img{
+.Side-list img{
     height : 18px;
     margin-right: 10px;
     
@@ -231,7 +231,6 @@
 }
 .input-chat{
     display: flex;
-    
     background-color: #fff;
     border-radius: 0px 0px 10px 10px;
     padding:10px;

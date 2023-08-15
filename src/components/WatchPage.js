@@ -28,7 +28,7 @@ const WatchPage = () => {
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     allowFullScreen></iframe>
     
-    <LiveChat/>
+    {/* <LiveChat/> */}
     </div>
     <CommentsContainer id={serachParam.get("v")}/>
     </div>

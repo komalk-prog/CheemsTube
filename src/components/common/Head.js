@@ -13,6 +13,8 @@ const Head = () => {
   const [searchQuery, setSearchQuery]=useState("");
   const [suggestions, setSuggestions]=useState();
   const [showSuggetions,setShowSuggetions]=useState(false);
+  const [inputValue,setInputValue] =useState();
+
   const dispatch=useDispatch();
 
   const searchCache=useSelector(store=>store.search);
@@ -64,7 +66,7 @@ const Head = () => {
       className="hambuger"
       onClick={()=>toggleMenuHandler()}
       />
-<a href="/">
+  <a href="/">
 
     <img
       alt="youtube"
@@ -88,8 +90,8 @@ const Head = () => {
     <input 
     type="text" 
     className='search-bar'
-    value={searchQuery}
-    onChange={(e)=>{setSearchQuery(e.target.value)}}
+    value={inputValue}
+    onChange={(e)=>{setInputValue(e.target.value); setSearchQuery(e.target.value)}}
     onFocus={()=>{
       if(suggestions)
       setShowSuggetions(true)
@@ -101,27 +103,26 @@ const Head = () => {
     <h3 className='search-emoji'>🔍</h3>
     </button>
         
-    </div>
-    {showSuggetions && suggestions?
+    </div> 
     <div className='suggestion' >
     <ul>
-      {suggestions.map((suggestion)=><li key={suggestion}>🔍 {suggestion}</li>)}
+      {suggestions.map((suggestion)=><li onClick={(e)=>{setInputValue(suggestion); console.log(inputValue)}} key={suggestion}>🔍 {suggestion}</li>)}
     </ul>
        
     </div>
     
     :null
     
-}
-</div>
-    <div className='profile'>
-
+    }
     </div>
+    <div className='profile'>
     <img
       alt="user"
       src={userIcon}
       className="user-icon"
     />
+    </div>
+    
     </div>
   )
 };

@@ -30,7 +30,7 @@ async function getCategories(){
   if (!isMenuOpen) return (
     <div >
     
-      <ul className="list">
+      <ul className="Side-list">
         <li>
         <Link to='/'><img
           alt=""
@@ -61,7 +61,7 @@ async function getCategories(){
 
   return (
     <div className="sideBar">
-      <ul className="list">
+      <ul className="Side-list">
         <li>
         <Link to="/">
          <img
@@ -90,7 +90,7 @@ async function getCategories(){
       </ul>
 
       <hr style={lineStyle} />
-      <ul className="list">
+      <ul className="Side-list">
       <li>
           <img
           alt=""
@@ -123,7 +123,7 @@ async function getCategories(){
       </ul>
       <hr style={lineStyle} />
       <h3 className="sideBar-headings">Explore</h3>
-      <ul className="list">
+      <ul className="Side-list">
       <li>
           <img
           alt=""
@@ -161,7 +161,7 @@ async function getCategories(){
       </ul>
       <hr style={lineStyle} />
       <h3 className="sideBar-headings">Categories</h3>
-      {categories? <ul className="list">
+      {categories? <ul className="Side-list">
       {categories.map(category=> 
       <li key={category.snippet.title}>
       <Link to={"/category/"+category.id}>{category.snippet.title}</Link>
