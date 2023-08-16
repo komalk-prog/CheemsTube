@@ -162,8 +162,8 @@ async function getCategories(){
       <hr style={lineStyle} />
       <h3 className="sideBar-headings">Categories</h3>
       {categories? <ul className="Side-list">
-      {categories.map(category=> 
-      <li key={category.snippet.title}>
+      {categories.map((category,i)=> 
+      <li key={category.snippet.title+i}>
       <Link to={"/category/"+category.id}>{category.snippet.title}</Link>
       </li>)}
      

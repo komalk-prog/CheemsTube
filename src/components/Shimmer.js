@@ -11,8 +11,8 @@ const Shimmer=()=>{
         return (
           <div>
           <div key={b} className="shimmer"></div>
-           <div className='title-shimmer'/>
-           <div className='views-shimmer'/>
+           <div key={b+"title"} className='title-shimmer'/>
+           <div key={b+"views"} className='views-shimmer'/>
           </div>
         );
       })}

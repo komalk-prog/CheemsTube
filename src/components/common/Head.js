@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import {toggleMenu} from "../../util/appSlice"
 import cheemsLogo from "../../images/cheemsLogo.png"
 import { cacheResults } from '../../util/searchSlice'
+import { Link } from 'react-router-dom'
+
 
 
 const Head = () => {
@@ -13,6 +15,7 @@ const Head = () => {
   const [searchQuery, setSearchQuery]=useState("");
   const [suggestions, setSuggestions]=useState();
   const [showSuggetions,setShowSuggetions]=useState(false);
+ 
   const dispatch=useDispatch();
 
   const searchCache=useSelector(store=>store.search);
@@ -53,8 +56,6 @@ const Head = () => {
 
 
 
-
-
   return (
     <div className='head'>
     <div>
@@ -64,7 +65,7 @@ const Head = () => {
       className="hambuger"
       onClick={()=>toggleMenuHandler()}
       />
-<a href="/">
+<Link to="/">
 
     <img
       alt="youtube"
@@ -79,7 +80,7 @@ const Head = () => {
       style={{width:"200px",height:"55px"}}
       className="cheems-icon"
     />
-     </a>
+     </Link>
     </div>
     
     <div className='search'>
@@ -96,16 +97,24 @@ const Head = () => {
       }}
     onBlur={()=>setShowSuggetions(false)}
     />
-
+    <Link to={"/results?searchquery="+searchQuery}>
     <button className='search-btn'>
     <h3 className='search-emoji'>🔍</h3>
+   
     </button>
+    </Link>
+    
         
     </div>
     {showSuggetions && suggestions?
     <div className='suggestion' >
     <ul>
-      {suggestions.map((suggestion)=><li key={suggestion}>🔍 {suggestion}</li>)}
+      {suggestions.map((suggestion)=><div
+       onMouseDown={(e)=>{
+        setShowSuggetions(false);
+        setSearchQuery(e.target.innerText);
+       }}><li 
+      key={suggestion}>🔍 {suggestion}</li></div>)}
     </ul>
        
     </div>
