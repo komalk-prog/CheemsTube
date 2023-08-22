@@ -15,7 +15,7 @@ const VideoContainer = () => {
     const VideoResponse= await fetch(YOUTUBE_VIDEOS_API);
    
     const videoJson= await VideoResponse.json();
-   setVideos(videoJson.items);
+    setVideos(videoJson.items);
   }
     useEffect(()=>{
       getVideo();

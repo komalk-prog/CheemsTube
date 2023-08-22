@@ -28,7 +28,7 @@ async function getCategories(){
 
 
   if (!isMenuOpen) return (
-    <div >
+    <div style={width}>
     
       <ul className="Side-list">
         <li>
@@ -180,5 +180,8 @@ const lineStyle = {
   marginBottom: "10px",
   width: "90%",
   marginLeft: "5%",
+};
+const width={
+  width:"5%"
 };
 export default SideBar;

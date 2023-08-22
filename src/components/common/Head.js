@@ -77,12 +77,10 @@ const Head = () => {
     <img
       alt="cheemstube"
       src={cheemsLogo}
-      style={{width:"200px",height:"55px"}}
       className="cheems-icon"
     />
      </Link>
     </div>
-    
     <div className='search'>
     <div>
 
@@ -112,7 +110,7 @@ const Head = () => {
       {suggestions.map((suggestion)=><div
        onMouseDown={(e)=>{
         setShowSuggetions(false);
-        setSearchQuery(e.target.innerText);
+        setSearchQuery(suggestion);
        }}><li 
       key={suggestion}>🔍 {suggestion}</li></div>)}
     </ul>

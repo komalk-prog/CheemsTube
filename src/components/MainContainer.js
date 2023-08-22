@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../util/appSlice';
-import ButtonList from './ButtonList';
+// import ButtonList from './ButtonList';
 import VideoContainer from './VideoContainer';
 
 
@@ -18,7 +18,7 @@ const MainContainer = () => {
 
   return (
     <div className='MainContainer'>
-    <ButtonList/>
+    {/* <ButtonList/> */}
     <VideoContainer/>
     </div>
   )

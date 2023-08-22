@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { closeMenu } from '../util/appSlice';
 import CommentsContainer from './CommentsContainer';
-import LiveChat from './Live/LiveChat';
+import RelatedVideos from './RelatedVideos';
+import VideoDetails from './VideoDetails';
 
 
 const WatchPage = () => {
@@ -19,18 +20,12 @@ const WatchPage = () => {
    
   return (
     <div className='watch-page'>
-    <div className='video-live-container'>
-    <iframe 
-   className='embbed-video'
-    src={"https://www.youtube.com/embed/"+serachParam.get("v")}
-    title="YouTube video player" 
-    frameBorder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowFullScreen></iframe>
-    
+    <div className='video-related-container'>
+    <VideoDetails id={serachParam.get("v")}/>
     {/* <LiveChat/> */}
-    </div>
     <CommentsContainer id={serachParam.get("v")}/>
+    </div>
+    <RelatedVideos id={serachParam.get("v")}/>
     </div>
   )
 };

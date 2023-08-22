@@ -2,8 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: "Roboto","Arial",sans-serif;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
 *:focus{
     outline: none;
@@ -42,7 +41,7 @@
     padding: 10px;
     display: flex;
     width: 99%;
-    background-color: rgb(247, 196, 130);
+    background-color: rgb(250, 250, 250);
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: fixed;
@@ -54,6 +53,10 @@
     width: 40px;
     cursor: pointer;
 }
+.cheems-icon{
+    width:200px;
+    height:55px;
+}
 .logo-icon{
     padding: 10px;
     margin-left: 5px;
@@ -61,9 +64,7 @@
     width: 40px;
 }
 .search{
-    padding: 20px;
-    margin-left: 7%;
-
+    padding: 22px 0px 0px 0px;
 }
 .search-bar{
     width:500px;
@@ -113,22 +114,18 @@
     padding-top: 15px;
 }
 .sideBar-headings{
-    margin:15px;
-    margin-bottom: 10px;
+    padding: 5px;
 }
 .Side-list{
     list-style: none;
-    margin:20px;
-    margin-top: 20px;
+    padding:5px 0px 5px 12px;
 }
 .Side-list li{
     margin-bottom: 25px;
-   
 }
 .Side-list img{
     height : 18px;
-    margin-right: 10px;
-    
+    margin-right: 5px;
 }
 .MainContainer{
     margin-left: 20px;
@@ -151,7 +148,7 @@
 }
 .video-img{
     height:180px;
-    width:325px; 
+    width:90%; 
     border-radius: 2%;
 }
 .videoCard{
@@ -169,18 +166,29 @@
 }
 .watch-page{
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: wrap;
+    width: 95%;
     margin: 5px;
 }
-
-
+.video-related-container{
+    width: 95vw;
+    margin-top: 5px;
+    margin-left: 10px;
+}
 .embbed-video{
-    width:65%;
+    width:95%;
     height:490px; 
+    margin-left: 10px;
+    border-radius: 2%;
+}
+.related-videos{
+    width: 35%;
+    padding: 0px 0px 0px 23px;
 }
 
-
+.related-videos-card{
+    padding: 5px;
+}
 .user-icon-comment{
     padding: 5px;
     height: 30px;
@@ -193,16 +201,14 @@
     border-radius: 4px;
     width: 40%;
 }
+.comment-list{
+    padding: 10px;
+}
 .replies{
     padding: 2px;
     margin-left: 10px;
     margin-top: 5px;
     border-left: 2px solid black;
-}
-
-.video-live-container{
-    display: flex;
-    margin-top: 5px;
 }
 .live-chat{
     height: 380px;
@@ -248,4 +254,74 @@
     padding: 8px;
     margin-left: 10px;
    color: green;
+}
+@media only screen and (max-width: 500px){
+    body{
+        font-size: 10px;
+    }
+    .head{
+        height: 50px;
+    }
+    .hambuger{
+        padding: 15px 0px 0px 0px;
+        height: 20px;
+        width: 20px;
+    }
+    .logo-icon {
+        padding: 15px 5px 0px 3px;
+        height: 20px;
+        width: 20px;
+    }
+    .cheems-icon{
+        width: 85px;
+        height: 25px;
+    }
+    .search{
+        padding: 15px 0px 0px 0px;
+    }
+    .search-bar {
+        width: 70px;
+        height: 25px;
+    }
+    .search-btn {
+        height: 27px;
+        width: 36px;
+        border-radius: 0px 40px 40px 0px;
+    }
+    .user-icon {
+        padding:15px 13px 0px 0px;
+        height: 20px;
+        width: 20px;
+    }
+    .sideBar {
+        height: 100%;
+        width: 13%;
+        padding-top: 0px;
+    }
+    .video-list{
+        padding: 4px 0px 0px 15px;
+    }
+    .videoCard {
+        margin-bottom: 0px;
+        padding: 0px 0px 10px 6px;
+        height: 200px;
+        width: 275px;
+    }
+    .video-img {
+        height: 150px;
+        width: 250px;
+        border-radius: 2%;
+    }
+    .shimmer{
+        height: 150px;
+        width: 250px;  
+    }
+    .title-shimmer{
+        width: 200px;
+    }
+    .embbed-video {
+        width: 97%;
+        height: 300px;
+    }
+    
 }

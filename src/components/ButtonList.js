@@ -1,5 +1,12 @@
 import React from 'react'
-import Button from './Button'
+
+const Button = ({name}) => {
+  return (
+    <div>
+        <button className='button'>{name}</button>
+    </div>
+  )
+}
 
 const ButtonList = () => {
   return (
