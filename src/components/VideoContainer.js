@@ -28,8 +28,6 @@ const VideoContainer = () => {
   return (
   <div className='video-list'>
    {videos.map((video)=> <VideoCard key={video.snippet.title} video={video}/>)}
- 
-
   </div>
     
   )

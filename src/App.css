@@ -36,6 +36,15 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.watchpage-icon{
+    height: 23px;
+    width: 23px;
+}
+.description{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(160, 160, 160);
+}
 .head{
     height: 80px;
     padding: 10px;
